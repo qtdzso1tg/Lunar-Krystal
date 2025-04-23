@@ -82,7 +82,7 @@ module.exports = function ({ api, models, Users, Threads, Currencies }) {
       const checker = stringSimilarity.findBestMatch(commandName, allCommandName);
       var gio = moment.tz("Asia/Ho_Chi_Minh").format("D/MM/YYYY || HH:mm:ss");
       if (checker.bestMatch.rating >= 0.5) command = global.client.commands.get(checker.bestMatch.target);
-      else return api.sendMessage({body:`==[ ${global.config.BOTNAME} ]==\n❎ Lệnh không tồn tại !\n✅ Lệnh gần giống là: ${checker.bestMatch.target}\n─────────────────\n🎶 Thời gian hoạt động: ${hours}:${minutes}:${seconds}\n⏰ Time: ${gio}`, attachment: global.krystal.splice(0, 1)}, threadID, messageID);
+      else return api.sendMessage({body:`Lệnh bạn sử dụng không tồn tại, có phải là lệnh ${checker.bestMatch.target} hay không?`, attachment: global.krystal.splice(0, 1)}, threadID, messageID);
     }
 
     if (commandBanned.get(threadID) || commandBanned.get(senderID)) {
@@ -126,17 +126,17 @@ module.exports = function ({ api, models, Users, Threads, Currencies }) {
     if (command.config.hasPermssion == 1 ){
       quyenhan = "Quản Trị Viên"
     } else if (command.config.hasPermssion == 2 ) {
-      quyenhan = "Người Thuê Bot mới sử dụng được nhé"
+      quyenhan = "Người Dùng Bot"
     } else if(command.config.hasPermssion == 3) {
       quyenhan = "ADMIN"
     }
-    if (command.config.hasPermssion > permssion) return api.sendMessage(`Quyền hạn của lệnh: ${command.config.name} là ${quyenhan}`, event.threadID, event.messageID);
+    if (command.config.hasPermssion > permssion) return api.sendMessage(`Bạn không đủ quyền hạn để có thể sử dụng lệnh ${command.config.name}`, event.threadID, event.messageID);
 
     if (!client.cooldowns.has(command.config.name)) client.cooldowns.set(command.config.name, new Map());
     const timestamps = client.cooldowns.get(command.config.name);
     const expirationTime = (command.config.cooldowns || 1) * 1000;
     if (timestamps.has(senderID) && dateNow < timestamps.get(senderID) + expirationTime)
-      return api.sendMessage(`⏱ Bạn đang trong thời gian chờ!\n Vui lòng thử lại sau ${((timestamps.get(senderID) + expirationTime - dateNow)/1000).toString().slice(0, 5)}s nữa nhé!!!`, threadID, messageID);
+      return api.sendMessage(`⏱ Bạn đang trong thời gian chờ!\nVui lòng thử lại sau ${((timestamps.get(senderID) + expirationTime - dateNow)/1000).toString().slice(0, 5)}s nữa nhé!!!`, threadID, messageID);
 
     var getText2;
     if (command.languages && typeof command.languages == 'object' && command.languages.hasOwnProperty(global.config.language))
