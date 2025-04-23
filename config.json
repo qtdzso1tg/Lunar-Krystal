@@ -17,7 +17,7 @@
     "BOTNAME": "Meo",
     "AMDIN_NAME": "qtdzso1tg",
     "FACEBOOK_ADMIN": "https://www.facebook.com/100051439970359",
-    "PREFIX": "/",
+    "PREFIX": "!",
     "ADMINBOT": [
         "100051439970359"
     ],
