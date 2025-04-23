@@ -58,14 +58,14 @@ users.needObject=Phải là một Object
 
 # includes/handle/handleCommand.js
 
-handleCommand.userBanned=Hiện tại bạn đang bị cấm sử dụng bot!\nLiên hệ FB: https://www.facebook.com/100018277053087 để biết thêm chi tiết.\nNội dung: %1\nTime xúc phạm: %2
-handleCommand.threadBanned=Hiện tại nhóm của bạn đang bị cấm sử dụng bot!\nVui lòng liên hệ ADMIN qua:\n📌FB: https://www.facebook.com/100018277053087.\nĐể có thể xin và sử dụng lại bot.\n%1\n%2
-handleCommand.commandNotExist= Xin chào!\nTôi là bot, có vẻ bạn đã nhập sai tên lệnh hoặc lệnh không tồn tại, bạn cần giúp gì hay không ?\n\nChúng tôi tìm thấy lệnh gần giống là "%1".
-handleCommand.commandThreadBanned=Nhóm bạn đã bị cấm sử dụng lệnh "%1"\nVui lòng liên hệ ADMIN qua:\n📌FB: https://www.facebook.com/100018277053087
-handleCommand.commandUserBanned=Bạn đã bị cấm sử dụng lệnh "%1"\nVui lòng liên hệ ADMIN qua:\n📌FB: https://www.facebook.com/100018277053087
+handleCommand.userBanned=Hiện tại bạn đang bị cấm sử dụng bot!\n🔰 Liên hệ FB: https://www.facebook.com/100051439970359 để được mở band.
+handleCommand.threadBanned=Hiện tại nhóm của bạn đang bị cấm sử dụng bot!\n🔰 Liên hệ FB: https://www.facebook.com/100051439970359 để được mở band.
+handleCommand.commandNotExist= Lệnh bạn sử dụng không tồn tại, có phải là lệnh "%1" hay không?
+handleCommand.commandThreadBanned=Nhóm bạn đã bị cấm sử dụng lệnh "%1"\n🔰 Liên hệ FB: https://www.facebook.com/100051439970359 để được mở band.
+handleCommand.commandUserBanned=Bạn đã bị cấm sử dụng lệnh "%1"\n🔰 Liên hệ FB: https://www.facebook.com/100051439970359 để được mở band.
 handleCommand.threadNotAllowNSFW=Nhóm của bạn không được phép sử dụng những lệnh cấm NSFW vì nó chứa nội dung 18+ 
 handleCommand.cantGetInfoThread=Không thể lấy thông tin của nhóm, lỗi: %1
-handleCommand.permssionNotEnough= Xin lỗi vì bạn là thành viên nên lệnh  "%1" sẽ không hoạt động. Chỉ có quản trị viên hoặc ADMIN dùng được!!!
+handleCommand.permssionNotEnough= Xin lỗi vì bạn là thành viên nên lệnh  "%1" sẽ không hoạt động. Chỉ có quản trị viên hoặc ADMIN dùng được.
 handleCommand.cantSetMessageReaction=Đã có lỗi xảy ra tại setMessageReaction, lỗi: %1
 handleCommand.notFoundLanguage=Không tìm thấy ngôn ngữ hỗ trợ cho module %1s
 handleCommand.executeCommand=» %1 « Lệnh sử dụng: %2 bởi người dùng: %3 tại nhóm: %4 | Args đi kèm: %5 | Thời gian xử lý: %6ms
@@ -101,4 +101,4 @@ handleSchedule.exectuteError=Đã xảy ra lỗi trong lúc schedule tại modul
 
 # utils/index.js
 
-utils.throwError= » Dùng lệnh sai rồi bạn ơi vui lòng sử dụng %1help %2 để biết thêm hướng dẫn sử dụng bot.\nNếu bạn thấy khó hiểu quá vui lòng liên hệ ADMIN qua:FB:https://www.facebook.com/100018277053087.\nXin cảm ơn!
+utils.throwError=[!] Lệnh bạn đang sử dụng không đúng cú pháp, vui lòng sử dụng %1help %2 để biết thêm chi tiết cách sử dụng
