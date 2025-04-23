@@ -35,7 +35,7 @@ module.exports.run = async function({ api, event, Users  , Threads}) {
   if (typeof thread["joinNoti"] != "undefined" && thread["joinNoti"] == false) return;
   ///////////////////////////////////////////////////////
 	if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
-		api.changeNickname(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "Bot của qtdzso1tg." : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
+		api.changeNickname(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "Made by Khôi" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
 		const fs = require("fs");
     var mlg="Kết nối thành công\nĐã load toàn bộ lệnh và người dùng trong nhóm.\n❌ Nếu nhóm của bạn chưa kích hoạt sử dụng bot, vui lòng sử dụng lệnh 'callad' để liên hệ Admin.\n🌐 Facebook: https://www.facebook.com/100051439970359"
     	return api.sendMessage(threadID,async () => {
@@ -69,9 +69,6 @@ await api.shareContact(`${mlg}`, 100051439970359, threadID);
 		  
 			const { createReadStream, existsSync, mkdirSync, readdirSync } = global.nodemodule["fs-extra"];
 			let { threadName, participantIDs } = await api.getThreadInfo(threadID);
-			const threadData = global.data.threadData.get(parseInt(threadID)) || {};
-			const path = join(__dirname, "cache", "joinGif");
-			const pathGif = join(path,`chao.gif`);
       const moment = require("moment-timezone");
       const time = moment.tz("Asia/Ho_Chi_Minh").format(" HH:mm:ss - DD/MM/YYYY");
       const hours = moment.tz("Asia/Ho_Chi_Minh").format("HH");
@@ -84,8 +81,8 @@ await api.shareContact(`${mlg}`, 100051439970359, threadID);
   if (thu == 'Friday') thu = 'Thứ Sáu'
   if (thu == 'Saturday') thu = 'Thứ Bảy'
 			const threadData = global.data.threadData.get(parseInt(threadID)) || {};
-			/*const path = join(__dirname, "cache", "joinGif");
-			const pathGif = join(path, `join.mp4`);
+			const path = join(__dirname, "cache", "joinGif");
+			const pathGif = join(path, `chao.gif`);
 */
 				var mentions = [], nameArray = [], memLength = [], iduser = [], i = 0;
 			
