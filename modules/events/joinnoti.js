@@ -37,7 +37,7 @@ module.exports.run = async function({ api, event, Users  , Threads}) {
 	if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
 		api.changeNickname(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "Made by Khôi" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
 		const fs = require("fs");
-    var mlg="🔰 Connected successfully 🔰\n👉Tôi là Bot của qtdzso1tg\n💗Sử dụng {PREFIX}menu để biết hết lệnh của Bot\n🌐 Facebook Admin: https://www.facebook.com/100051439970359"
+    var mlg="🔰 Connected successfully 🔰\n👉 Tôi là Bot của qtdzso1tg\n💗 Sử dụng {PREFIX}menu để biết hết lệnh của Bot\n🌐 Facebook Admin: https://www.facebook.com/100051439970359"
     	return api.sendMessage(threadID,async () => {
 await api.shareContact(`${mlg}`, 100051439970359, threadID);
 });
