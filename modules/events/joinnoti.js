@@ -69,6 +69,7 @@ await api.shareContact(`${mlg}`, 100051439970359, threadID);
 		  
 			const { createReadStream, existsSync, mkdirSync, readdirSync } = global.nodemodule["fs-extra"];
 			let { threadName, participantIDs } = await api.getThreadInfo(threadID);
+			
       const moment = require("moment-timezone");
       const time = moment.tz("Asia/Ho_Chi_Minh").format(" HH:mm:ss - DD/MM/YYYY");
       const hours = moment.tz("Asia/Ho_Chi_Minh").format("HH");
